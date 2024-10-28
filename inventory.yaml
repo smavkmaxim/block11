@@ -1,18 +1,10 @@
 webservers:
   hosts:
     web01:
-      ansible_host: 10.129.0.28
+      ansible_host: 10.128.0.7
       ansible_user: user
-      ansible_password: gsmfzis
-
-dbservers:
-  hosts:
-    db01:
-      ansible_host: 10.129.0.41
-      ansible_user: user
-      ansible_password: gsmfzis
+      ansible_password: ltuqill
 
 all:
   webservers:
-  dbservers:
 
