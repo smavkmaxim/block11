@@ -31,3 +31,9 @@
       name: nginx
       state: started    # переводим в состояние «запущено»
       enabled: yes      # добавляем в автозагрузку
+  - name: Install python3-passlib
+    become: yes
+    yum:
+      name: python3-passlib
+      state: latest
+      update_cache: true
