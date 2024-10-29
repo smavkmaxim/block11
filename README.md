@@ -1,4 +1,7 @@
 # block11
+
+ansible-playbook -i ~/task/inventory.yaml nginxsecret.yml
+
 ansible_rebrain
 
 
