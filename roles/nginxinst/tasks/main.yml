@@ -48,10 +48,11 @@
       src: index.html.j2
       dest: /usr/share/nginx/html/index.html
   - name: Add a user to a password file and ensure permissions are set
+    become: yes
     community.general.htpasswd:
       path: /etc/nginx/.htpasswd
       name: user
-      password: 'secretPassword123'
+      password: " {{ nginx.vault.user }} "
   - name: Start Nginx service
     become: yes
     service:
