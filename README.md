@@ -2,7 +2,7 @@
 
  git clone https://github.com/smavkmaxim/block11.git ~/task
 
-ansible-playbook -i ~/task/inventory.yaml nginxsecret.yml
+ansible-playbook -i ~/task/inventory.yaml ~/task/nginxsecret.yml
 
 ansible_rebrain
 
