@@ -4,6 +4,8 @@
 
 ansible-playbook -i ~/task/inventory.yaml ~/task/nginxsecret.yml
 
+ansible-playbook -i ~/task/inventory.yaml ~/task/nginxsecret.yml -e "@~/.ansible/$USER.vault" --vault-password-file .vault_pass.txt
+
 ansible_rebrain
 
 
