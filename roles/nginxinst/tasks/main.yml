@@ -18,13 +18,6 @@
       name: nginx
       state: latest
       update_cache: true
-  - name: Install Nginx on CentOS/RHEL specific version 
-    become: yes
-    yum:
-      name: nginx
-      state: present
-      allow_downgrade: true # если мы захотим переустановить пакет меньшей версии
-      update_cache: true
   - name: Start Nginx service
     become: yes
     service:
@@ -37,7 +30,7 @@
       name: python3-passlib
       state: latest
       update_cache: true
-  - name: copy nginx.vault
+  - name: copy nginx.conf
     become: yes
     template:
       src: nginx.conf.j2
