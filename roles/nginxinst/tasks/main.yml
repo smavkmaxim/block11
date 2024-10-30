@@ -3,6 +3,10 @@
 - name: Nginx installation
   block:
 
+  - name: control var
+    become: yes
+    debug:
+      msg: " {{  user }} "
   - name: Add Nginx repository on CentOS/RHEL
     become: yes
     yum_repository:
@@ -45,7 +49,7 @@
     community.general.htpasswd:
       path: /etc/nginx/.htpasswd
       name: user
-      password: " {{ nginx.vault.user }} "
+      password: "{{ user }}"
   - name: Start Nginx service
     become: yes
     service:
